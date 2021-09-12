@@ -1,10 +1,13 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex justify-center q-pt-xl">
     <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
+      alt="Bullish logo"
+      src="~assets/main_page.png"
+      style="height: 300px; width: auto"
     >
+    <div class="row flex justify-center">
+      <div class="col-6"></div>
+    </div>
   </q-page>
 </template>
 
