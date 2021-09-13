@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
 
-    <q-header bordered elevated class="bg-primary text-white">
+    <q-header bordered elevated class="bg-white text-black">
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="left = !left" />
 
@@ -11,13 +11,12 @@
           </q-avatar>
           Trading Helper
         </q-toolbar-title>
-        <q-btn dense flat round icon="menu" @click="left = !left" />
       </q-toolbar>
     </q-header>
 
     <q-drawer show-if-above v-model="left" width="200" bordered side="left">
       <!-- drawer content -->
-      <q-item clickable v-ripple>
+      <q-item :to="{ name: 'Home' }" clickable v-ripple :active="this.$route.name === 'Home'" active-class="text-red">
         <q-item-section avatar>
           <q-icon name="home" />
         </q-item-section>
@@ -26,17 +25,8 @@
           Home
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple>
-        <q-item-section avatar>
-          <q-icon name="functions" />
-        </q-item-section>
 
-        <q-item-section>
-          Calculator
-        </q-item-section>
-      </q-item>
-
-      <q-item clickable v-ripple>
+      <q-item :to="{ name: 'My Trades' }" clickable v-ripple :active="this.$route.name === 'My Trades'" active-class="text-red">
         <q-item-section avatar>
           <q-icon name="request_quote" />
         </q-item-section>
